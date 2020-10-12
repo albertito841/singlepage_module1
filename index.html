@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html ng-app="LunchCheck">
     <head>
         <title>Lunch Checker</title>
@@ -8,16 +9,16 @@
         <meta http-equiv="Pragma" content="no-cache">
         <link rel="stylesheet" href="styles/bootstrap.min.css">
         <script src="js/angular.min.js"></script>
+        
         <style>.message {font-size: 1.3mm; font-weight: bold;}</style>
     </head>
     <body>
-        <div ng-controller="LunchCheckController" class="container">
+        <div ng-controller="LunchCheckController">
             <h1>Lunch Checker</h1>
-                {{name}}
                 <div class="form-group">
                     <input id="lunch-menu" type="text"
                     placeholder="list comma separated dishes you usually have for lunch"
-                    class="form-control">
+                    class="form-control" ng-model="name">
                 </div>
                 <div class="form-group">
                     <button class="btn btn-default">Check If Too Much</button>
